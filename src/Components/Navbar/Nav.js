@@ -9,6 +9,7 @@ import {
   Collapse,
   useDisclosure,
   useColorMode,
+  Avatar,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -30,6 +31,7 @@ const Nav = () => {
     };
   }, []);
 
+  const profile = require("./profile.png");
   return (
     <Box>
       <Box
@@ -43,6 +45,14 @@ const Nav = () => {
         position={"relative"}
         minH={"60px"}
       >
+        <Avatar
+          name="María José Issa"
+          src={profile}
+          bg={colorMode === "light" ? "#162d33" : "#846076"}
+          position={"absolute"}
+          left={5}
+          m={1.5}
+        />
         <IconButton
           onClick={toggleColorMode}
           colorScheme="gray"
@@ -86,7 +96,7 @@ const Nav = () => {
           >
             <List
               textAlign="center"
-              fontFamily='"Hanken Grotesk", sans-serif'
+              fontFamily='"Quicksand", sans-serif'
               fontWeight={500}
               textTransform={"uppercase"}
             >
@@ -102,9 +112,6 @@ const Nav = () => {
                 </ListItem>
                 <ListItem p={4}>
                   <a href="#home">Experience</a>
-                </ListItem>
-                <ListItem p={4}>
-                  <a href="#home">Check out my CV</a>
                 </ListItem>
                 <ListItem p={4}>
                   <a href="#home">My projects</a>
@@ -135,6 +142,14 @@ const Nav = () => {
         minH={"60px"}
         transition="background-color 0.3s"
       >
+        <Avatar
+          name="María José Issa"
+          src={profile}
+          bg={colorMode === "light" ? "#162d33" : "#846076"}
+          position={"absolute"}
+          left={5}
+          m={1.5}
+        />
         <List
           fontFamily='"Hanken Grotesk", sans-serif'
           fontWeight={500}
@@ -160,9 +175,6 @@ const Nav = () => {
             </ListItem>
             <ListItem>
               <a href="#home">Experience</a>
-            </ListItem>
-            <ListItem>
-              <a href="#home">Check out my CV</a>
             </ListItem>
             <ListItem>
               <a href="#home">My projects</a>

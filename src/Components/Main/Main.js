@@ -1,13 +1,16 @@
 import { VStack } from "@chakra-ui/react";
-import Title from "../GeneralComponents/Title";
-import Subtitle from "../GeneralComponents/Subtitle";
+import { ParallaxProvider } from "react-scroll-parallax";
+import MainTexts from "./MainTexts";
+import MainImage from "./MainImage";
 
 const Main = () => {
   return (
-    <VStack>
-      <Title text={"Hi, I'm María José Issa."} />
-      <Subtitle text={"A full-stack developer and UX Enthusiast"} />
-    </VStack>
+    <ParallaxProvider>
+      <VStack>
+        <MainImage />
+        <MainTexts />
+      </VStack>
+    </ParallaxProvider>
   );
 };
 

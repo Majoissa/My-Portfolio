@@ -1,21 +1,18 @@
 import React from "react";
 import Nav from "../Navbar/Nav";
 import Main from "../Main/Main";
-import { Box, Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import About from "../About/About";
+import WhatIdo from "../WhatIDo/WhatIdo";
+import Experience from "../Experience/Experience";
 const HomePage = () => {
-  const image = require("./formas.png");
   return (
     <Box>
       <Nav />
-      <Image
-        src={image}
-        alt="hola"
-        w={"100%"}
-        objectFit={"cover"}
-        opacity={0.5}
-        zIndex={0}
-      />
       <Main />
+      <About />
+      <WhatIdo />
+      <Experience />
     </Box>
   );
 };

@@ -8,15 +8,16 @@ const Subtitle = ({ text }) => {
     <Box>
       <Fade>
         <Heading
-          as={"h1"}
-          fontFamily='"Hanken Grotesk", sans-serif'
+          as={"h2"}
+          fontFamily='"Quicksand", sans-serif'
           fontWeight={500}
           color={colorMode === "light" ? "#486060" : "white"}
           zIndex={5}
           mt={{
-            base: "-35vw",
-            sm: "-42vw",
-            md: "-48vw",
+            base: "-115vh",
+            sm: "-106vh",
+            md: "-90vh",
+            lg: "-78vh",
           }}
           size={{ base: "xs", sm: "sm", md: "md" }}
         >
