@@ -17,7 +17,7 @@ const ExperienceImage = () => {
           w={"100vw"}
           h={{ base: "100vh", sm: "140vh", md: "160vh" }}
           objectFit={"cover"}
-          opacity={0.7}
+          opacity={0.9}
         />
       </Parallax>
     </VStack>

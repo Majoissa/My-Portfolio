@@ -16,7 +16,7 @@ const MainImage = () => {
           w={"100vw"}
           h={{ base: "60vh", sm: "70vh", md: "110vh", lg: "138vh" }}
           objectFit={"cover"}
-          opacity={0.7}
+          opacity={0.9}
           zIndex={0}
         />
       </Parallax>

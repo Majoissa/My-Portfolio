@@ -7,7 +7,7 @@ const About = () => {
   const { colorMode } = useColorMode();
   return (
     <Box
-      bg={colorMode === "light" ? "#dbea4b" : "#456f79"}
+      bg={colorMode === "light" ? "#f1e995" : "#456f79"}
       h={"105vh"}
       py={10}
       zIndex={111}
