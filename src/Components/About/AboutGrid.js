@@ -5,14 +5,11 @@ import MyDescription from "./MyDescription";
 
 const AboutGrid = () => {
   return (
-    <VStack
-      mt={{ base: "-430px", md: "-350px" }}
-      mb={{ base: "30px", md: "60px" }}
-    >
+    <VStack>
       <SimpleGrid
-        width={{ base: "60%", md: "80%", lg: "70%" }}
+        width={{ base: "60%", md: "95%", xl: "65%" }}
         columns={{ base: 1, md: 2 }}
-        spacingX={{ base: "0px", md: "20px" }}
+        spacingX={{ base: "0px", md: "5px" }}
       >
         <Box>
           <AboutImage />

@@ -25,20 +25,21 @@ const WhatIdoGrid = () => {
         <Fade cascade direction="left" damping={0.1} key={index}>
           <VStack
             bg={colorMode === "light" ? "#f7f2c3" : "#162d33"}
-            py={30}
+            py={50}
             borderTopLeftRadius={"0px"}
             borderTopRightRadius={"40px"}
             borderBottomLeftRadius={"40px"}
             borderBottomRightRadius={"0px"}
-            boxShadow="5px 2px 10px 0 rgba(0, 0, 0, 0.5)"
+            boxShadow="2px 2px 5px 0 rgba(0, 0, 0, 0.5)"
           >
             <Avatar
               boxShadow="7px 2px 10px 0 rgba(0, 0, 0, 0.5)"
               size="2xl"
               icon={<Icon fontSize="3rem" color="#162d33" />}
               bg={colorMode === "light" ? "#afd6c4" : "#456f79"}
+              mb={{ base: "none", md: "-50" }}
             />
-            <Box width={"50%"}>
+            <Box width={"70%"}>
               <MyDescription text={descriptionsArray[index]} />
             </Box>
           </VStack>
