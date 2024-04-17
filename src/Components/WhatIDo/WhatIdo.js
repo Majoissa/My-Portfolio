@@ -3,6 +3,7 @@ import { Box, VStack, useColorMode } from "@chakra-ui/react";
 import Title from "../GeneralComponents/Title";
 //import Subtitle from "../GeneralComponents/Subtitle";
 import WhatIdoGrid from "./WhatIdoGrid";
+import { Fade } from "react-awesome-reveal";
 
 const WhatIdo = () => {
   const { colorMode } = useColorMode();
@@ -13,19 +14,14 @@ const WhatIdo = () => {
           ? "linear(to-r,#d988c2, #d9b5d3,#d988c2)"
           : "linear(to-r, #32282e, #725c76, #32282e)"
       }
-      position={"relative"}
-      top={{ base: "-470", sm: "-380", md: "-310", lg: "-50" }}
-      py={{ base: "120px", md: "170px" }}
+      py={{ base: "60px", md: "150px" }}
     >
       <VStack>
-        <Box
-          position={"absolute"}
-          top={{ base: "850", sm: "800", md: "820", lg: "630" }}
-          mt={0}
-          zIndex={2}
-        >
-          <Title text={"What I do"} />
-        </Box>
+        <Fade cascade direction="down" damping={0.3}>
+          <Box mb={{ base: "60px", md: "100px" }}>
+            <Title text={"What I do"} />
+          </Box>
+        </Fade>
         <WhatIdoGrid />
       </VStack>
     </Box>

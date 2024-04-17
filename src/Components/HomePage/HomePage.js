@@ -1,10 +1,12 @@
 import React from "react";
 import Nav from "../Navbar/Nav";
-import Main from "../Main/Main";
+
 import { Box } from "@chakra-ui/react";
+import Main from "../Main/Main";
 import About from "../About/About";
-import WhatIdo from "../WhatIDo/WhatIdo";
 import Experience from "../Experience/Experience";
+import Projects from "../Projects/Projects";
+import WhatIdo from "../WhatIDo/WhatIdo";
 const HomePage = () => {
   return (
     <Box>
@@ -13,6 +15,7 @@ const HomePage = () => {
       <About />
       <WhatIdo />
       <Experience />
+      <Projects />
     </Box>
   );
 };

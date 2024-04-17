@@ -2,25 +2,25 @@ import React from "react";
 import Title from "../GeneralComponents/Title";
 import { VStack, Box, useColorMode } from "@chakra-ui/react";
 import AboutGrid from "./AboutGrid";
+import { Fade } from "react-awesome-reveal";
 
 const About = () => {
   const { colorMode } = useColorMode();
   return (
     <Box
-      bg={colorMode === "light" ? "#f1e995" : "#456f79"}
-      h={"105vh"}
-      py={10}
-      zIndex={111}
-      position={"relative"}
-      top={{ base: "-470", sm: "-380", md: "-310", lg: "-50" }}
+      bgGradient={
+        colorMode === "light"
+          ? "linear(to-r,#efe259, #f4e97a,#efe259)"
+          : "linear(to-r, #215460, #456f79, #215460)"
+      }
+      py={{ base: "20", md: "40" }}
     >
-      <VStack position={"relative"} mt={500} spacing={8}>
-        <Box
-          position={"absolute"}
-          top={{ base: "300", sm: "280", md: "260", lg: "120" }}
-        >
-          <Title text={"A little bit about me!"} />
-        </Box>
+      <VStack spacing={8}>
+        <Fade cascade direction="down" damping={0.3}>
+          <Box mb={25}>
+            <Title text={"A little bit about me!"} />
+          </Box>
+        </Fade>
         <AboutGrid />
       </VStack>
     </Box>

@@ -37,13 +37,15 @@ const Nav = () => {
       <Box
         as="nav"
         id="navbar"
-        bg={colorMode === "light" ? "#afd6c4" : "#162d33;"}
+        bg={colorMode === "light" ? "#93cdd4" : "#162d33;"}
         zIndex={5}
         display={{ base: "flex", lg: "none" }}
         justifyContent={"flex-end"}
         alignItems={"center"}
-        position={"relative"}
+        position={"fixed"}
         minH={"60px"}
+        minW={"100vw"}
+        boxShadow="0px 0px 10px 0 #162d33"
       >
         <Avatar
           name="María José Issa"
@@ -72,7 +74,7 @@ const Nav = () => {
           _hover={{ opacity: 0.8 }}
           variant="ghost"
           position="absolute"
-          right={0}
+          right={3}
           top={0}
           zIndex={1}
           mt={3}
@@ -85,7 +87,7 @@ const Nav = () => {
 
         <Collapse in={isOpen} animateOpacity textAlign={"center"}>
           <Box
-            bg={colorMode === "light" ? "#afd6c4" : "#162d33;"}
+            bg={colorMode === "light" ? "#93cdd4" : "#162d33;"}
             position="absolute"
             top="100%"
             right={0}
@@ -96,13 +98,18 @@ const Nav = () => {
           >
             <List
               textAlign="center"
-              fontFamily='"Quicksand", sans-serif'
+              fontFamily=' "Hedvig Letters Sans", sans-serif;'
               fontWeight={500}
               textTransform={"uppercase"}
             >
               <UnorderedList
                 listStyleType={"none"}
                 color={colorMode === "light" ? "#486060" : "white"}
+                fontSize={{
+                  base: "15px",
+                  sm: "18px",
+                  md: "22px",
+                }}
               >
                 <ListItem p={4}>
                   <a href="#home">About me</a>
@@ -126,10 +133,11 @@ const Nav = () => {
       </Box>
       <Box
         as="nav"
+        boxShadow={isScrolled ? "0px 0px 10px 0 grey" : "none"}
         bg={
           isScrolled
             ? colorMode === "light"
-              ? "#afd6c4"
+              ? "#93cdd4"
               : "#162d33"
             : "transparent"
         }
@@ -139,7 +147,7 @@ const Nav = () => {
         left={0}
         right={0}
         zIndex={999}
-        minH={"60px"}
+        minH={{ base: "60px" }}
         transition="background-color 0.3s"
       >
         <Avatar
@@ -148,10 +156,11 @@ const Nav = () => {
           bg={colorMode === "light" ? "#162d33" : "#846076"}
           position={"absolute"}
           left={5}
-          m={1.5}
+          m={{ base: "1.5" }}
+          size={{ base: "md" }}
         />
         <List
-          fontFamily='"Hanken Grotesk", sans-serif'
+          amily='"Josefin Sans", sans-serif'
           fontWeight={500}
           textTransform={"uppercase"}
           pr={15}
@@ -166,6 +175,7 @@ const Nav = () => {
             minH={"60px"}
             gap={10}
             color={colorMode === "light" ? "#486060" : "white"}
+            fontSize={{ sm: "16px", lg: "18px" }}
           >
             <ListItem>
               <a href="#home">About me</a>
@@ -183,6 +193,7 @@ const Nav = () => {
               <a href="#home">Contact</a>
             </ListItem>
             <IconButton
+              size={{ base: "sm" }}
               onClick={toggleColorMode}
               colorScheme="gray"
               _hover={{ opacity: 0.8 }}
@@ -190,9 +201,9 @@ const Nav = () => {
               borderRadius={100}
             >
               {colorMode === "light" ? (
-                <MoonIcon boxSize={5} color={"#486060"} />
+                <MoonIcon boxSize={{ base: "5" }} color={"#486060"} />
               ) : (
-                <SunIcon boxSize={5} />
+                <SunIcon boxSize={{ base: "5", xl: "8" }} />
               )}
             </IconButton>
           </UnorderedList>

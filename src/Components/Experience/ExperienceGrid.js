@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  VStack,
-  Box,
-  SimpleGrid,
-  useColorMode,
-  Avatar,
-} from "@chakra-ui/react";
+import { VStack, SimpleGrid, useColorMode, Avatar } from "@chakra-ui/react";
 import {
   IoLogoNodejs,
   IoLogoHtml5,
@@ -29,8 +23,6 @@ import { Fade } from "react-awesome-reveal";
 import { SiPostgresql } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 import { SiMysql } from "react-icons/si";
-import { Parallax } from "react-scroll-parallax";
-import { BiLogoMongodb } from "react-icons/bi";
 import { SiChakraui } from "react-icons/si";
 import { RiBootstrapLine } from "react-icons/ri";
 const ExperienceGrid = () => {
@@ -60,30 +52,28 @@ const ExperienceGrid = () => {
 
   return (
     <SimpleGrid
-      columns={{ base: 2, md: 4, lg: "5" }}
-      spacing={1}
+      columns={{ base: 4, md: 5 }}
+      spacing={2}
       width={{ base: "70%", md: "50%" }}
-      position={"relative"}
-      top={{ base: "-500", sm: "-450", md: "-400", lg: "-300" }}
+      position={"absolute"}
+      mt={{ base: "240px", md: "280px", lg: "420px" }}
     >
       {iconsArray.map((Icon, index) => (
-        <Parallax speed={20} key={index}>
-          <Fade cascade direction="right" damping={0.1}>
-            <VStack>
-              <Avatar
-                boxShadow="7px 2px 10px 0 rgba(0, 0, 0, 0.5)"
-                size={{ base: "lg", sm: "xl" }}
-                icon={
-                  <Icon
-                    fontSize={{ base: "1.5rem", sm: "3rem" }}
-                    color={colorMode === "light" ? "#162d33" : "#162d33"}
-                  />
-                }
-                bg={colorMode === "light" ? "#f8f5ca" : "#846076"}
-              />
-            </VStack>
-          </Fade>
-        </Parallax>
+        <Fade cascade direction="right" damping={0.1}>
+          <VStack>
+            <Avatar
+              boxShadow="2px 2px 7px 0 rgba(0, 0, 0, 0.5)"
+              size={{ base: "lg", md: "xl" }}
+              icon={
+                <Icon
+                  fontSize={{ base: "1.5rem", md: "3rem" }}
+                  color={colorMode === "light" ? "#162d33" : "#162d33"}
+                />
+              }
+              bg={colorMode === "light" ? "#f7f2c3" : "#846076"}
+            />
+          </VStack>
+        </Fade>
       ))}
     </SimpleGrid>
   );
