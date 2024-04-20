@@ -37,7 +37,7 @@ const Nav = () => {
       <Box
         as="nav"
         id="navbar"
-        bg={colorMode === "light" ? "#93cdd4" : "#162d33;"}
+        bg={colorMode === "light" ? "#a6ddeb" : "#162d33;"}
         zIndex={5}
         display={{ base: "flex", lg: "none" }}
         justifyContent={"flex-end"}
@@ -45,7 +45,7 @@ const Nav = () => {
         position={"fixed"}
         minH={"60px"}
         minW={"100vw"}
-        boxShadow="0px 0px 10px 0 #162d33"
+        boxShadow="0px 0px 5px 0 #162d33"
       >
         <Avatar
           name="María José Issa"
@@ -87,7 +87,7 @@ const Nav = () => {
 
         <Collapse in={isOpen} animateOpacity textAlign={"center"}>
           <Box
-            bg={colorMode === "light" ? "#93cdd4" : "#162d33;"}
+            bg={colorMode === "light" ? "#a6ddeb" : "#162d33;"}
             position="absolute"
             top="100%"
             right={0}
@@ -98,7 +98,7 @@ const Nav = () => {
           >
             <List
               textAlign="center"
-              fontFamily=' "Hedvig Letters Sans", sans-serif;'
+              fontFamily=' "Karla", sans-serif'
               fontWeight={500}
               textTransform={"uppercase"}
             >
@@ -106,9 +106,8 @@ const Nav = () => {
                 listStyleType={"none"}
                 color={colorMode === "light" ? "#486060" : "white"}
                 fontSize={{
-                  base: "15px",
-                  sm: "18px",
-                  md: "22px",
+                  base: "12px",
+                  md: "16px",
                 }}
               >
                 <ListItem p={4}>
@@ -133,11 +132,11 @@ const Nav = () => {
       </Box>
       <Box
         as="nav"
-        boxShadow={isScrolled ? "0px 0px 10px 0 grey" : "none"}
+        boxShadow={isScrolled ? "0px 0px 5px #162d33" : "none"}
         bg={
           isScrolled
             ? colorMode === "light"
-              ? "#93cdd4"
+              ? "#a6ddeb"
               : "#162d33"
             : "transparent"
         }
@@ -175,7 +174,11 @@ const Nav = () => {
             minH={"60px"}
             gap={10}
             color={colorMode === "light" ? "#486060" : "white"}
-            fontSize={{ sm: "16px", lg: "18px" }}
+            fontSize={{
+              base: "12px",
+              md: "16px",
+            }}
+            fontFamily=' "Karla", sans-serif'
           >
             <ListItem>
               <a href="#home">About me</a>

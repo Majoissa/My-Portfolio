@@ -33,11 +33,29 @@ const WhatIdoGrid = () => {
             boxShadow="2px 2px 5px 0 rgba(0, 0, 0, 0.5)"
           >
             <Avatar
-              boxShadow="7px 2px 10px 0 rgba(0, 0, 0, 0.5)"
-              size="2xl"
-              icon={<Icon fontSize="3rem" color="#162d33" />}
-              bg={colorMode === "light" ? "#afd6c4" : "#456f79"}
+              boxShadow="2px 2px 5px rgba(0, 0, 0, 0.5)"
+              size="xl"
+              icon={
+                <Icon
+                  fontSize="3rem"
+                  color={colorMode === "light" ? "#162d33" : "white"}
+                />
+              }
+              bg={colorMode === "light" ? "#efe259" : "#215460"}
               mb={{ base: "none", md: "-50" }}
+              style={{ transition: "transform 0.3s" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "rotateY(180deg)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = "rotateY(0deg)")
+              }
+              onTouchStart={(e) =>
+                (e.currentTarget.style.transform = "rotateY(180deg)")
+              }
+              onTouchEnd={(e) =>
+                (e.currentTarget.style.transform = "rotateY(0deg)")
+              }
             />
             <Box width={"70%"}>
               <MyDescription text={descriptionsArray[index]} />

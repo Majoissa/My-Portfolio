@@ -15,7 +15,7 @@ const AboutImage = () => {
           width={{ base: "200px", md: "270px", lg: "300px" }}
           height={{ base: "200px", md: "380px", lg: "470px" }}
           objectFit="cover"
-          boxShadow="5px 2px 10px 0 rgba(0, 0, 0, 0.5)"
+          boxShadow="2px 2px 5px  rgba(0, 0, 0, 0.5)"
           borderTopLeftRadius={{ base: "500px", md: "150px" }}
           borderTopRightRadius={{ base: "500px", md: "150px" }}
           borderBottomRadius={{ base: "500px", md: "0px" }}

@@ -5,12 +5,14 @@ const MainImage = () => {
   return (
     <VStack>
       <Image
+        position={"fixed"}
+        zIndex={-1}
         src={image}
         alt="hola"
-        w={"100vw"}
-        h={{ base: "45vh", sm: "60vh", md: "auto" }}
+        w={"100%"}
+        h={{ base: "120vh" }}
         objectFit={"cover"}
-        opacity={0.8}
+        opacity={0.6}
         mt={-5}
       />
     </VStack>

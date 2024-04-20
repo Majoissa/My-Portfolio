@@ -1,16 +1,18 @@
-import { Image, VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 
 const ExperienceImage = () => {
-  const image = require("../Main/formas.png");
   return (
-    <VStack h={"100vh"}>
-      <Image
-        src={image}
-        alt="hola"
+    <VStack h={"100vh"} position={"absolute"}>
+      <Box
+        bg={"transparent"}
         w={"100vw"}
-        minHeight={{ base: "55rem", md: "70rem", lg: "90rem" }}
-        objectFit={"cover"}
-        opacity={0.8}
+        minHeight={{
+          base: "42rem",
+          sm: "45rem",
+          md: "52rem",
+          lg: "60rem",
+          xl: "63rem",
+        }}
       />
     </VStack>
   );

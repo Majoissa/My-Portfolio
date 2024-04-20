@@ -9,12 +9,11 @@ const MyDescription = ({ text }) => {
       <Fade cascade direction="left">
         <Heading
           as={"h2"}
-          fontFamily=' "Hedvig Letters Sans", sans-serif'
+          fontFamily=' "Karla", sans-serif'
           fontWeight={500}
           color={colorMode === "light" ? "#486060" : "white"}
           zIndex={5}
-          size={{ base: "xs", sm: "sm", md: "md" }}
-          fontSize={{ lg: "22px" }}
+          size={{ base: "xs", md: "sm", lg: "md" }}
           textAlign={{ base: "center", md: "left" }}
           mt={{ base: "15", md: "50", lg: "75" }}
         >

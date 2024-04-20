@@ -56,7 +56,7 @@ const ExperienceGrid = () => {
       spacing={2}
       width={{ base: "70%", md: "50%" }}
       position={"absolute"}
-      mt={{ base: "240px", md: "280px", lg: "420px" }}
+      mt={{ base: "240px", md: "280px", lg: "360px" }}
     >
       {iconsArray.map((Icon, index) => (
         <Fade cascade direction="right" damping={0.1}>
@@ -67,7 +67,7 @@ const ExperienceGrid = () => {
               icon={
                 <Icon
                   fontSize={{ base: "1.5rem", md: "3rem" }}
-                  color={colorMode === "light" ? "#162d33" : "#162d33"}
+                  color={colorMode === "light" ? "#486060" : "white"}
                 />
               }
               bg={colorMode === "light" ? "#f7f2c3" : "#846076"}
