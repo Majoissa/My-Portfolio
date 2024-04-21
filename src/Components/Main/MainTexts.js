@@ -10,7 +10,6 @@ const MainTexts = () => {
       w={"100%"}
       h={{ base: "100vh", lg: "120vh" }}
       spacing={8}
-      position={"absolute"}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}

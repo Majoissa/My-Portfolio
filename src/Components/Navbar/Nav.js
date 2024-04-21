@@ -18,10 +18,33 @@ const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const handleScroll = () => {
+    const sections = [
+      "home",
+      "about",
+      "whatIdo",
+      "experience",
+      "projects",
+      "contact",
+    ];
     const currentScrollY = window.scrollY;
     setIsScrolled(currentScrollY > 0);
+    const sectionOffsets = sections.map((section) => {
+      const element = document.getElementById(section);
+      return element ? element.offsetTop : null;
+    });
+
+    const currentSection = sections.find((section, index) => {
+      return (
+        currentScrollY >= sectionOffsets[index] &&
+        (index === sections.length - 1 ||
+          currentScrollY < sectionOffsets[index + 1])
+      );
+    });
+
+    setActiveSection(currentSection);
   };
 
   useEffect(() => {
@@ -45,7 +68,6 @@ const Nav = () => {
         position={"fixed"}
         minH={"60px"}
         minW={"100vw"}
-        boxShadow="0px 0px 5px 0 #162d33"
       >
         <Avatar
           name="María José Issa"
@@ -111,19 +133,96 @@ const Nav = () => {
                 }}
               >
                 <ListItem p={4}>
-                  <a href="#home">About me</a>
+                  <a
+                    href="#about"
+                    onClick={() => setActiveSection("about")}
+                    style={{
+                      fontWeight: activeSection === "about" ? "700" : "500",
+                      color:
+                        activeSection === "about"
+                          ? colorMode === "light"
+                            ? "black"
+                            : "#f2eca9"
+                          : "inherit",
+                    }}
+                  >
+                    About me
+                  </a>
                 </ListItem>
                 <ListItem p={4}>
-                  <a href="#home">What I do</a>
+                  <a
+                    href="#whatIdo"
+                    onClick={() => setActiveSection("whatIdo")}
+                    style={{
+                      fontWeight: activeSection === "whatIdo" ? "700" : "500",
+                      color:
+                        activeSection === "whatIdo"
+                          ? colorMode === "light"
+                            ? "black"
+                            : "#f2eca9"
+                          : "inherit",
+                    }}
+                  >
+                    What I do
+                  </a>
                 </ListItem>
                 <ListItem p={4}>
-                  <a href="#home">Experience</a>
+                  <a
+                    href="#experience"
+                    onClick={() => setActiveSection("experience")}
+                    style={{
+                      fontWeight:
+                        activeSection === "experience" ? "700" : "500",
+                      color:
+                        activeSection === "experience"
+                          ? colorMode === "light"
+                            ? "black"
+                            : "#f2eca9"
+                          : "inherit",
+                    }}
+                  >
+                    Experience
+                  </a>
                 </ListItem>
                 <ListItem p={4}>
-                  <a href="#home">My projects</a>
+                  <a
+                    href="#projects"
+                    onClick={() => setActiveSection("projects")}
+                    style={{
+                      fontWeight: activeSection === "projects" ? "700" : "500",
+                      color:
+                        activeSection === "projects"
+                          ? colorMode === "light"
+                            ? "black"
+                            : "#f2eca9"
+                          : "inherit",
+                    }}
+                  >
+                    My projects
+                  </a>
                 </ListItem>
                 <ListItem p={4}>
-                  <a href="#home">Contact</a>
+                  <a
+                    href="#contact"
+                    onClick={() => setActiveSection("contact")}
+                    style={{
+                      fontWeight: activeSection === "contact" ? "700" : "500",
+                      color:
+                        activeSection === "contact"
+                          ? colorMode === "light"
+                            ? "black"
+                            : "#f2eca9"
+                          : "inherit",
+                    }}
+                  >
+                    Contact
+                  </a>
+                  <a
+                    href="#contact"
+                    onClick={() => setActiveSection("contact")}
+                  >
+                    Contact
+                  </a>
                 </ListItem>
               </UnorderedList>
             </List>
@@ -132,7 +231,6 @@ const Nav = () => {
       </Box>
       <Box
         as="nav"
-        boxShadow={isScrolled ? "0px 0px 5px #162d33" : "none"}
         bg={
           isScrolled
             ? colorMode === "light"
@@ -181,19 +279,89 @@ const Nav = () => {
             fontFamily=' "Karla", sans-serif'
           >
             <ListItem>
-              <a href="#home">About me</a>
+              <a
+                href="#about"
+                onClick={() => setActiveSection("about")}
+                style={{
+                  fontWeight: activeSection === "about" ? "700" : "500",
+                  color:
+                    activeSection === "about"
+                      ? colorMode === "light"
+                        ? "black"
+                        : "#f2eca9"
+                      : "inherit",
+                }}
+              >
+                About me
+              </a>
             </ListItem>
             <ListItem>
-              <a href="#home">What I do</a>
+              <a
+                href="#whatIdo"
+                onClick={() => setActiveSection("whatIdo")}
+                style={{
+                  fontWeight: activeSection === "whatIdo" ? "700" : "500",
+                  color:
+                    activeSection === "whatIdo"
+                      ? colorMode === "light"
+                        ? "black"
+                        : "#f2eca9"
+                      : "inherit",
+                }}
+              >
+                What I do
+              </a>
             </ListItem>
             <ListItem>
-              <a href="#home">Experience</a>
+              <a
+                href="#experience"
+                onClick={() => setActiveSection("experience")}
+                style={{
+                  fontWeight: activeSection === "experience" ? "700" : "500",
+                  color:
+                    activeSection === "experience"
+                      ? colorMode === "light"
+                        ? "black"
+                        : "#f2eca9"
+                      : "inherit",
+                }}
+              >
+                Experience
+              </a>
             </ListItem>
             <ListItem>
-              <a href="#home">My projects</a>
+              <a
+                href="#projects"
+                onClick={() => setActiveSection("projects")}
+                style={{
+                  fontWeight: activeSection === "projects" ? "700" : "500",
+                  color:
+                    activeSection === "projects"
+                      ? colorMode === "light"
+                        ? "black"
+                        : "#f2eca9"
+                      : "inherit",
+                }}
+              >
+                My projects
+              </a>
             </ListItem>
             <ListItem>
-              <a href="#home">Contact</a>
+              <a
+                href="#contact"
+                onClick={() => setActiveSection("contact")}
+                style={{
+                  fontWeight: activeSection === "contact" ? "700" : "500",
+                  color:
+                    activeSection === "contact"
+                      ? colorMode === "light"
+                        ? "black"
+                        : "#f2eca9"
+                      : "inherit",
+                }}
+              >
+                Contact
+              </a>
             </ListItem>
             <IconButton
               size={{ base: "sm" }}

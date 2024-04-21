@@ -8,7 +8,7 @@ const About = () => {
   const { colorMode } = useColorMode();
   return (
     <Box
-      mt={{ base: "100vh", lg: "115vh" }}
+      id="about"
       bgGradient={
         colorMode === "light"
           ? "linear(to-r,#f4eeae, #f0e9a2,#f0e9a2,#f4eeae)"

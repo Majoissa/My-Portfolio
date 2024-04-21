@@ -12,7 +12,7 @@ import { Fade } from "react-awesome-reveal";
 
 const WhatIdoGrid = () => {
   const { colorMode } = useColorMode();
-  const iconArray = [IoIosChatbubbles, IoMdCode, IoIosChatbubbles];
+  const iconArray = [IoMdColorPalette, IoMdCode, IoIosChatbubbles];
   const descriptionsArray = [
     "I like to code and learn new programming things. I am constantly trying to innovate, and taking new courses to expand my knowledge and improve my professionalism.",
     "I like to code and learn new programming things. I am constantly trying to innovate, and taking new courses to expand my knowledge and improve my professionalism.",

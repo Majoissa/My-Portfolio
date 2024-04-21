@@ -8,9 +8,10 @@ const WhatIdo = () => {
   const { colorMode } = useColorMode();
   return (
     <Box
+      id="whatIdo"
       bgGradient={
         colorMode === "light"
-          ? "linear(to-r,#cd6bb1,#d988c2, #d988c2,#cd6bb1)"
+          ? "linear(to-r,#af91a7,#dfbdd7, #dfbdd7,#af91a7)"
           : "linear(to-r, #32282e, #725c76, #725c76, #32282e)"
       }
       py={{ base: "5rem", md: "8rem" }}

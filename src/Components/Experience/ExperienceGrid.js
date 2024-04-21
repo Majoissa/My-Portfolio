@@ -55,8 +55,7 @@ const ExperienceGrid = () => {
       columns={{ base: 4, md: 5 }}
       spacing={2}
       width={{ base: "70%", md: "50%" }}
-      position={"absolute"}
-      mt={{ base: "240px", md: "280px", lg: "360px" }}
+      mt={{ base: "2rem", md: "4rem" }}
     >
       {iconsArray.map((Icon, index) => (
         <Fade cascade direction="right" damping={0.1}>

@@ -12,11 +12,11 @@ const ProjectsGrid = () => {
     },
     {
       src: require("./phone.png"),
-      title: "Mobile Applications",
+      title: "Mobile Apps",
       lightColor: "#a4d9df",
       darkColor: "#4ea8ba",
-      bottom: "-12rem",
-      left: "-2rem",
+      bottom: { base: "-25rem", md: "-12rem" },
+      left: { base: "-6rem", md: "-2rem" },
     },
 
     {

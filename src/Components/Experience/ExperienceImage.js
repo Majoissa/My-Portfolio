@@ -2,7 +2,7 @@ import { Box, VStack } from "@chakra-ui/react";
 
 const ExperienceImage = () => {
   return (
-    <VStack h={"100vh"} position={"absolute"}>
+    <VStack h={"100vh"}>
       <Box
         bg={"transparent"}
         w={"100vw"}

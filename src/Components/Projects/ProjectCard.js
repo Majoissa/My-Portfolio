@@ -15,13 +15,19 @@ const ProjectCard = ({
   return (
     <Box
       bg={colorMode === "light" ? lightColor : darkColor}
-      pr={"250px"}
-      pt={"150px"}
-      minW={"650px"}
-      minH={"600px"}
+      pr={"20rem"}
+      pt={"15rem"}
+      minW={{ base: "40vw", sm: "60vw", lg: "40vw" }}
+      minH={{ base: "45vh", sm: "50vh", md: "55vh", lg: "80vh" }}
       overflow="hidden"
       position="relative"
       borderRadius="30px"
+      _hover={{
+        ".image": {
+          transform: "scale(1.1)",
+          transition: "transform 0.5s ease-in-out",
+        },
+      }}
     >
       <Heading
         position={"absolute"}
@@ -37,11 +43,15 @@ const ProjectCard = ({
         {title}
       </Heading>
       <Image
+        className="image"
         position="absolute"
         src={img}
         alt={alt}
         bottom={bottomPosition}
         left={leftPosition}
+        sx={{
+          transition: "transform 0.2s ease-in-out",
+        }}
       />
     </Box>
   );

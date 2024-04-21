@@ -8,14 +8,14 @@ const Projects = () => {
   const { colorMode } = useColorMode();
   return (
     <Box
+      id="projects"
       bgGradient={
         colorMode === "light"
           ? "linear(to-r,#f4eeae, #f0e9a2,#f0e9a2,#f4eeae)"
           : "linear(to-r, #215460, #456f79, #215460)"
       }
       py={{ base: "4rem", md: "8rem" }}
-      position={"absolute"}
-      mt={{ base: "42rem", sm: "45rem", md: "52rem", lg: "60rem", xl: "63rem" }}
+      mt={{ base: "8rem", md: "12rem" }}
       w={"100%"}
     >
       <VStack spacing={8}>

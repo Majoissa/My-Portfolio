@@ -11,7 +11,6 @@ const ExperienceTexts = () => {
       zIndex={1}
       w={{ base: "50%", md: "45%", lg: "35%" }}
       textAlign={"center"}
-      position={"absolute"}
       mt={{ base: "5rem", md: "8rem" }}
     >
       <Fade cascade direction="down" damping={0.3}>
