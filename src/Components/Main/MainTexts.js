@@ -7,15 +7,14 @@ import { Fade } from "react-awesome-reveal";
 const MainTexts = () => {
   return (
     <VStack
+      w={"100%"}
+      h={{ base: "100vh", lg: "120vh" }}
       spacing={8}
-      position={"absolute"}
-      top={{
-        base: "120",
-        sm: "200",
-        md: "250",
-        lg: "300",
-        xl: "500",
-      }}
+      display={"flex"}
+      flexDirection={"column"}
+      justifyContent={"center"}
+      alignItems={"center"}
+      textAlign={"center"}
     >
       <Fade cascade direction="down" damping={0.3}>
         <Title text={"Hi, I'm María José Issa."} />

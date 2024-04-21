@@ -8,10 +8,10 @@ const Subtitle = ({ text }) => {
       <Heading
         position={"relative"}
         as={"h2"}
-        mily=' "Hedvig Letters Sans", sans-serif'
+        mily='"Karla", sans-serif'
         fontWeight={500}
         color={colorMode === "light" ? "#486060" : "white"}
-        size={{ base: "xs", sm: "sm", md: "md", lg: "lg" }}
+        size={{ base: "xs", md: "sm", lg: "md" }}
       >
         {text}
       </Heading>

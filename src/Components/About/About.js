@@ -8,17 +8,21 @@ const About = () => {
   const { colorMode } = useColorMode();
   return (
     <Box
+      id="about"
       bgGradient={
         colorMode === "light"
-          ? "linear(to-r,#efe259, #f4e97a,#efe259)"
+          ? "linear(to-r,#f4eeae, #f0e9a2,#f0e9a2,#f4eeae)"
           : "linear(to-r, #215460, #456f79, #215460)"
       }
-      py={{ base: "20", md: "40" }}
+      py={{ base: "5rem", md: "8rem" }}
+      w={"100%"}
+      minW={"100%"}
+      maxW={"100%"}
     >
       <VStack spacing={8}>
         <Fade cascade direction="down" damping={0.3}>
           <Box mb={25}>
-            <Title text={"A little bit about me!"} />
+            <Title text={"A little bit about me."} />
           </Box>
         </Fade>
         <AboutGrid />

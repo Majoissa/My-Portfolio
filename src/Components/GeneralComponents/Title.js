@@ -10,7 +10,6 @@ const Title = ({ text }) => {
         as={"h1"}
         fontFamily=' "Paytone One", sans-serif'
         fontWeight={"bold"}
-        textTransform={"uppercase"}
         color={colorMode === "light" ? "#486060" : "white"}
         textShadow={"0.5px 0.5px 2px rgba(0, 0, 0, 0.5)"}
         size={{ base: "md", sm: "lg", md: "xl", lg: "2xl" }}
