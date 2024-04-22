@@ -18,8 +18,10 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -94,6 +96,7 @@ const ContactForm = () => {
     <Box>
       <VStack
         as="form"
+        fontFamily=' "Karla", sans-serif'
         onSubmit={handleSubmit}
         maxW={{ base: "90%", sm: "85%", md: "60%", lg: "40%" }}
         bg={"white"}
@@ -103,13 +106,13 @@ const ContactForm = () => {
         color={"black"}
       >
         <FormControl mt={50} maxW={600} isRequired>
-          <FormLabel mt={5}>Name</FormLabel>
+          <FormLabel mt={5}>{t("name-label")}</FormLabel>
           <Input
             type="text"
             value={name}
             onChange={handlenameChange}
             onBlur={() => handleBlur("name")}
-            placeholder="Name"
+            placeholder={t("name-label")}
             isInvalid={touchedFields.name && name === ""}
             sx={{
               "::placeholder": {
@@ -121,15 +124,15 @@ const ContactForm = () => {
             mt={1}
             color={touchedFields.name && name === "" ? "red" : "gray"}
           >
-            Enter your name.
+            {t("name-help")}
           </FormHelperText>
-          <FormLabel mt={5}>Email</FormLabel>
+          <FormLabel mt={5}>{t("mail-label")}</FormLabel>
           <Input
             type="email"
             value={mail}
             onChange={handlemailChange}
             onBlur={() => handleBlur("mail")}
-            placeholder="Email"
+            placeholder={t("mail-label")}
             isInvalid={touchedFields.mail && mail === ""}
             sx={{
               "::placeholder": {
@@ -141,14 +144,14 @@ const ContactForm = () => {
             mt={1}
             color={touchedFields.mail && mail === "" ? "red" : "gray"}
           >
-            Enter your email.
+            {t("mail-help")}
           </FormHelperText>
-          <FormLabel mt={5}>message</FormLabel>
+          <FormLabel mt={5}>{t("message")}</FormLabel>
           <Textarea
             value={message}
             onChange={handleMessageChange}
             onBlur={() => handleBlur("message")}
-            placeholder="Message"
+            placeholder={t("message")}
             isInvalid={touchedFields.message && message === ""}
             sx={{
               "::placeholder": {
@@ -161,10 +164,16 @@ const ContactForm = () => {
             mt={1}
             color={touchedFields.mail && mail === "" ? "red" : "gray"}
           >
-            Enter your message.
+            {t("message-help")}
           </FormHelperText>
-          <Button mt={5} mb={20} colorScheme="teal" type="submit">
-            Send
+          <Button
+            mt={5}
+            mb={20}
+            colorScheme="teal"
+            type="submit"
+            fontFamily=' "Karla", sans-serif'
+          >
+            {t("send-button")}
           </Button>
         </FormControl>
       </VStack>

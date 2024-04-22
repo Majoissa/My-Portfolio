@@ -3,9 +3,11 @@ import Title from "../GeneralComponents/Title";
 import { VStack, Box, useColorMode } from "@chakra-ui/react";
 import AboutGrid from "./AboutGrid";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const { colorMode } = useColorMode();
+  const { t } = useTranslation();
   return (
     <Box
       id="about"
@@ -22,7 +24,7 @@ const About = () => {
       <VStack spacing={8}>
         <Fade cascade direction="down" damping={0.3}>
           <Box mb={25}>
-            <Title text={"A little bit about me."} />
+            <Title text={t("about-title")} />
           </Box>
         </Fade>
         <AboutGrid />

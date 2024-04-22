@@ -9,15 +9,13 @@ import {
 import { IoMdColorPalette, IoMdCode, IoIosChatbubbles } from "react-icons/io";
 import MyDescription from "../About/MyDescription";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const WhatIdoGrid = () => {
+  const { t } = useTranslation();
   const { colorMode } = useColorMode();
   const iconArray = [IoMdColorPalette, IoMdCode, IoIosChatbubbles];
-  const descriptionsArray = [
-    "I like to code and learn new programming things. I am constantly trying to innovate, and taking new courses to expand my knowledge and improve my professionalism.",
-    "I like to code and learn new programming things. I am constantly trying to innovate, and taking new courses to expand my knowledge and improve my professionalism.",
-    "I like to code and learn new programming things. I am constantly trying to innovate, and taking new courses to expand my knowledge and improve my professionalism.",
-  ];
+  const descriptionsArray = [t("design"), t("coding"), t("skills")];
 
   return (
     <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5} width={"90%"}>

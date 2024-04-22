@@ -3,8 +3,10 @@ import Subtitle from "../GeneralComponents/Subtitle";
 import React from "react";
 import { VStack } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const ExperienceTexts = () => {
+  const { t } = useTranslation();
   return (
     <VStack
       spacing={8}
@@ -14,12 +16,8 @@ const ExperienceTexts = () => {
       mt={{ base: "5rem", md: "8rem" }}
     >
       <Fade cascade direction="down" damping={0.3}>
-        <Title text={"My experience."} />
-        <Subtitle
-          text={
-            "In this section you can checkout some of the technologies that I have worked with"
-          }
-        />
+        <Title text={t("experience-title")} />
+        <Subtitle text={t("experience-description")} />
       </Fade>
     </VStack>
   );
