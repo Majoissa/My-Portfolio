@@ -3,8 +3,10 @@ import Subtitle from "../GeneralComponents/Subtitle";
 import React from "react";
 import { VStack } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const ContactTexts = () => {
+  const { t } = useTranslation();
   return (
     <VStack
       spacing={8}
@@ -15,12 +17,8 @@ const ContactTexts = () => {
       mb={{ base: "5rem", md: "8rem" }}
     >
       <Fade cascade direction="down" damping={0.3}>
-        <Title text={"Contact"} />
-        <Subtitle
-          text={
-            "¡Do not hesitate to contact me through this form and I will respond as soon as possible!"
-          }
-        />
+        <Title text={t("contact-title")} />
+        <Subtitle text={t("contact-subtitle")} />
       </Fade>
     </VStack>
   );

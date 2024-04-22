@@ -2,8 +2,10 @@ import React from "react";
 import { Box, SimpleGrid, VStack } from "@chakra-ui/react";
 import AboutImage from "./AboutImage";
 import MyDescription from "./MyDescription";
+import { useTranslation } from "react-i18next";
 
 const AboutGrid = () => {
+  const { t } = useTranslation();
   return (
     <VStack>
       <SimpleGrid
@@ -15,11 +17,7 @@ const AboutGrid = () => {
           <AboutImage />
         </Box>
         <Box mt={{ lg: "3rem" }}>
-          <MyDescription
-            text={
-              " I am a professional in constant training, passionate about the field of technology and learning. I am currently studying to strengthen my knowledge in web development and development of mobile applications and videogames. If you are looking for a developer who can seamlessly integrate both programming and visually appealing design elements into your projects, I am well-equipped to deliver outstanding results. If you want to work with me, don't hesitate to contact me. Together we can achieve great things"
-            }
-          />
+          <MyDescription text={t("about-description")} />
         </Box>
       </SimpleGrid>
     </VStack>

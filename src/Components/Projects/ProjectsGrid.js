@@ -1,27 +1,29 @@
 import { Box, useColorMode, Image, SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 const ProjectsGrid = () => {
+  const { t } = useTranslation();
   const imagesArray = [
     {
       src: require("./web.png"),
-      title: "Web pages",
+      title: t("pages"),
       lightColor: "#debed7",
       darkColor: "#836483",
-      bottom: "-4rem",
+      bottom: { base: "-8rem", lg: "-4rem" },
       left: "-8rem",
     },
     {
       src: require("./phone.png"),
-      title: "Mobile Apps",
+      title: t("apps"),
       lightColor: "#a4d9df",
       darkColor: "#4ea8ba",
-      bottom: { base: "-25rem", md: "-12rem" },
-      left: { base: "-6rem", md: "-2rem" },
+      bottom: { base: "-25rem", lg: "-12rem" },
+      left: { base: "-6rem", lg: "-2rem" },
     },
 
     {
       src: require("./apis.png"),
-      title: "Apis",
+      title: t("apis"),
       lightColor: "#efe259",
       darkColor: "#989565",
       bottom: "-2rem",
@@ -29,7 +31,7 @@ const ProjectsGrid = () => {
     },
     {
       src: require("./game.png"),
-      title: "Video Games",
+      title: t("games"),
       lightColor: "#f1c4d6",
       darkColor: "#956b82",
       bottom: "-2rem",

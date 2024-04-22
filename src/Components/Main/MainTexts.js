@@ -3,8 +3,10 @@ import Subtitle from "../GeneralComponents/Subtitle";
 import React from "react";
 import { VStack, HStack, Button } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const MainTexts = () => {
+  const { t } = useTranslation();
   return (
     <VStack
       w={"100%"}
@@ -17,14 +19,22 @@ const MainTexts = () => {
       textAlign={"center"}
     >
       <Fade cascade direction="down" damping={0.3}>
-        <Title text={"Hi, I'm María José Issa."} />
-        <Subtitle text={"A full-stack developer and UX Enthusiast"} />
+        <Title text={t("welcome-title")} />
+        <Subtitle text={t("welcome-subtitle")} />
         <HStack>
-          <Button size={{ base: "sm", lg: "lg" }} colorScheme="teal">
+          <Button
+            size={{ base: "sm", lg: "lg" }}
+            colorScheme="teal"
+            fontFamily=' "Karla", sans-serif'
+          >
             CV
           </Button>
-          <Button size={{ base: "sm", lg: "lg" }} colorScheme="teal">
-            Contact me!
+          <Button
+            size={{ base: "sm", lg: "lg" }}
+            colorScheme="teal"
+            fontFamily=' "Karla", sans-serif'
+          >
+            {t("contact-button")}
           </Button>
         </HStack>
       </Fade>

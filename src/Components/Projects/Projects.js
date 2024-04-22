@@ -3,8 +3,10 @@ import Title from "../GeneralComponents/Title";
 import { VStack, Box, useColorMode } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
 import ProjectsGrid from "./ProjectsGrid";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
   const { colorMode } = useColorMode();
   return (
     <Box
@@ -21,7 +23,7 @@ const Projects = () => {
       <VStack spacing={8}>
         <Fade cascade direction="down" damping={0.3}>
           <Box mb={{ base: "3rem", lg: "5rem" }}>
-            <Title text={"My projects"} />
+            <Title text={t("project-title")} />
           </Box>
         </Fade>
         <ProjectsGrid />

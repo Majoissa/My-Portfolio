@@ -1,3 +1,4 @@
+import "./i18n";
 import { Route } from "wouter";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";

@@ -10,7 +10,9 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { LuCopyright } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   const { colorMode } = useColorMode();
   return (
     <Box
@@ -36,16 +38,13 @@ const Footer = () => {
           <Text fontWeight={700} textTransform={"uppercase"}>
             María José Issa
           </Text>
-          <Text>
-            Full-stack developer in constant training, passionate about the
-            field of technology and learning.
-          </Text>
+          <Text>{t("footer-text")}</Text>
           <HStack>
             <LuCopyright />
-            <Text>All rigths reserved</Text>
+            <Text>{t("rights")}</Text>
           </HStack>
         </VStack>
-        <VStack>
+        <VStack align={"start"}>
           <Text fontWeight={700} textTransform={"uppercase"}>
             Social
           </Text>
