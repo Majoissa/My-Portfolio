@@ -48,13 +48,11 @@ app.post("/send", (req, res) => {
   smtpTransport.sendMail(mailOptions, (error, response) => {
     if (error) {
       console.error("Error sending email: ", error);
-      res
-        .status(500)
-        .send({
-          success: false,
-          message: "Failed to send email",
-          error: error,
-        });
+      res.status(500).send({
+        success: false,
+        message: "Failed to send email",
+        error: error,
+      });
     } else {
       res.send({ success: true, message: "Email sent" });
     }

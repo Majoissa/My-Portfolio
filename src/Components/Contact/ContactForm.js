@@ -17,7 +17,6 @@ import {
   AlertDialogOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
-import { useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
@@ -193,17 +192,14 @@ const ContactForm = () => {
             maxW={{ base: "90%", sm: "80%", md: "70%", lg: "50%", xl: "40%" }}
           >
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
-              Message sent successfully
+              {t("alert-header")}
             </AlertDialogHeader>
 
-            <AlertDialogBody>
-              Your message has been sent successfully. ¡I will contact you as
-              soon as possible!
-            </AlertDialogBody>
+            <AlertDialogBody>{t("alert-dialog")}</AlertDialogBody>
 
             <AlertDialogFooter>
               <Button colorScheme="green" onClick={onClose} ml={3}>
-                Accept
+                {t("acept")}
               </Button>
             </AlertDialogFooter>
           </AlertDialogContent>
@@ -225,16 +221,14 @@ const ContactForm = () => {
             maxW={{ base: "90%", sm: "80%", md: "70%", lg: "50%", xl: "40%" }}
           >
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
-              Failed to send email
+              {t("alert-no-header")}
             </AlertDialogHeader>
 
-            <AlertDialogBody>
-              Your message has not been sent. ¡You can try again!
-            </AlertDialogBody>
+            <AlertDialogBody>{t("alert-no-dialog")}</AlertDialogBody>
 
             <AlertDialogFooter>
               <Button colorScheme="red" onClick={onClose} ml={3}>
-                Accept
+                {t("acept")}
               </Button>
             </AlertDialogFooter>
           </AlertDialogContent>

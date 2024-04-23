@@ -22,6 +22,7 @@ const PagesGrid = () => {
     "https://raw.githubusercontent.com/Majoissa/My-Portfolio/main/src/imgs/tiendamuebles.jpg",
     "https://raw.githubusercontent.com/Majoissa/My-Portfolio/main/src/imgs/brandwise.jpg",
     "https://raw.githubusercontent.com/Majoissa/My-Portfolio/main/src/imgs/hair.jpg",
+    "https://raw.githubusercontent.com/Majoissa/My-Portfolio/main/src/imgs/old-portfolio.png",
   ];
   const projectTitles = t("pages-cards.pages-titles", { returnObjects: true });
   const projectDescriptions = t("pages-cards.pages-descriptions", {
