@@ -1,0 +1,23 @@
+.nav-link {
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #84a9ac;
+    animation: underline 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes underline {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  

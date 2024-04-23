@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Nav.css";
 import {
   Box,
   List,
@@ -15,8 +16,10 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "../GeneralComponents/LanguageSelector";
+import { useLocation } from "wouter";
 
 const Nav = () => {
+  const [location, setLocation] = useLocation();
   const { t } = useTranslation();
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
@@ -24,30 +27,35 @@ const Nav = () => {
   const [activeSection, setActiveSection] = useState("");
 
   const handleScroll = () => {
-    const sections = [
-      "home",
-      "about",
-      "whatIdo",
-      "experience",
-      "projects",
-      "contact",
-    ];
     const currentScrollY = window.scrollY;
     setIsScrolled(currentScrollY > 0);
-    const sectionOffsets = sections.map((section) => {
-      const element = document.getElementById(section);
-      return element ? element.offsetTop : null;
-    });
 
-    const currentSection = sections.find((section, index) => {
-      return (
-        currentScrollY >= sectionOffsets[index] &&
-        (index === sections.length - 1 ||
-          currentScrollY < sectionOffsets[index + 1])
-      );
-    });
+    if (location === "/") {
+      const sections = [
+        "home",
+        "about",
+        "whatIdo",
+        "experience",
+        "projects",
+        "contact",
+      ];
+      const sectionOffsets = sections.map((section) => {
+        const element = document.getElementById(section);
+        return element ? element.offsetTop : null;
+      });
 
-    setActiveSection(currentSection);
+      const currentSection = sections.find((section, index) => {
+        return (
+          currentScrollY >= sectionOffsets[index] &&
+          (index === sections.length - 1 ||
+            currentScrollY < sectionOffsets[index + 1])
+        );
+      });
+
+      setActiveSection(currentSection);
+    } else {
+      setActiveSection("");
+    }
   };
 
   useEffect(() => {
@@ -55,8 +63,18 @@ const Nav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [location]);
   const navItems = ["about", "whatIdo", "experience", "projects", "contact"];
+
+  const handleNavLinkClick = (item) => {
+    setActiveSection(item);
+
+    if (location !== "/" && activeSection !== "home") {
+      setLocation("/");
+    } else {
+      setActiveSection(item);
+    }
+  };
 
   const profile = require("./profile.png");
   return (
@@ -64,7 +82,7 @@ const Nav = () => {
       <Box
         as="nav"
         id="navbar"
-        bg={colorMode === "light" ? "#a6ddeb" : "#162d33;"}
+        bg={colorMode === "light" ? "#a6ddeb" : "#162d33"}
         zIndex={5}
         display={{ base: "flex", lg: "none" }}
         justifyContent={"flex-end"}
@@ -143,7 +161,8 @@ const Nav = () => {
                   <ListItem key={index} p={4}>
                     <a
                       href={`#${item}`}
-                      onClick={() => setActiveSection(item)}
+                      onClick={() => handleNavLinkClick(item)}
+                      className="nav-link"
                       style={{
                         fontWeight: activeSection === item ? "bold" : "normal",
                         color:
@@ -225,7 +244,8 @@ const Nav = () => {
               <ListItem key={index}>
                 <a
                   href={`#${item}`}
-                  onClick={() => setActiveSection(item)}
+                  onClick={() => handleNavLinkClick(item)}
+                  className="nav-link"
                   style={{
                     fontWeight: activeSection === item ? "bold" : "normal",
                     color:

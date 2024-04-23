@@ -8,7 +8,7 @@ const Subtitle = ({ text }) => {
       <Heading
         position={"relative"}
         as={"h2"}
-        mily='"Karla", sans-serif'
+        fontFamily='"Karla", sans-serif'
         fontWeight={500}
         color={colorMode === "light" ? "#486060" : "white"}
         size={{ base: "xs", md: "sm", lg: "md" }}
