@@ -7,12 +7,17 @@ import Pages from "./Components/Sections/Pages/Pages";
 import Apps from "./Components/Sections/Apps/Apps";
 import Apis from "./Components/Sections/Apis/Apis";
 import Videogames from "./Components/Sections/Videogames/Videogames";
+import Nav from "./Components/Navbar/Nav";
 
 function App() {
   return (
     <ChakraProvider>
       <Box>
-        <Route path="/" component={HomePage} />
+        <Box as="header" className="App-header">
+          <Nav />
+
+          <Route path="/" component={HomePage} />
+        </Box>
         <Route path="/pages" component={Pages} />
         <Route path="/apps" component={Apps} />
         <Route path="/videogames" component={Videogames} />

@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from "../Navbar/Nav";
-
 import { Box } from "@chakra-ui/react";
 import Main from "../Main/Main";
 import About from "../About/About";
@@ -12,7 +10,6 @@ import Contact from "../Contact/Contact";
 const HomePage = () => {
   return (
     <Box>
-      <Nav />
       <Main />
       <About />
       <WhatIdo />
