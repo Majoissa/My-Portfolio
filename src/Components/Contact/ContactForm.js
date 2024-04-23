@@ -103,7 +103,7 @@ const ContactForm = () => {
         margin={"auto"}
         px={"2rem"}
         borderRadius={"30px"}
-        color={"black"}
+        color={"#486060"}
       >
         <FormControl mt={50} maxW={600} isRequired>
           <FormLabel mt={5}>{t("name-label")}</FormLabel>

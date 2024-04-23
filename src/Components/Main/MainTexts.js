@@ -22,20 +22,28 @@ const MainTexts = () => {
         <Title text={t("welcome-title")} />
         <Subtitle text={t("welcome-subtitle")} />
         <HStack>
-          <Button
-            size={{ base: "sm", lg: "lg" }}
-            colorScheme="teal"
-            fontFamily=' "Karla", sans-serif'
+          <a
+            href="https://drive.google.com/file/d/1DQ3WCCU9gyXldJUOkNhWslBGI53nkqRw/view"
+            target="_blank"
+            rel="noreferrer"
           >
-            CV
-          </Button>
-          <Button
-            size={{ base: "sm", lg: "lg" }}
-            colorScheme="teal"
-            fontFamily=' "Karla", sans-serif'
-          >
-            {t("contact-button")}
-          </Button>
+            <Button
+              size={{ base: "sm", lg: "lg" }}
+              colorScheme="teal"
+              fontFamily=' "Karla", sans-serif'
+            >
+              CV
+            </Button>
+          </a>
+          <a href="#contact">
+            <Button
+              size={{ base: "sm", lg: "lg" }}
+              colorScheme="teal"
+              fontFamily=' "Karla", sans-serif'
+            >
+              {t("contact-button")}
+            </Button>
+          </a>
         </HStack>
       </Fade>
     </VStack>
