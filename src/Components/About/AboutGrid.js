@@ -9,7 +9,7 @@ const AboutGrid = () => {
   return (
     <VStack>
       <SimpleGrid
-        width={{ base: "90%", md: "80%", xl: "65%", "2xl": "50%" }}
+        width={{ base: "80%", xl: "65%", "2xl": "50%" }}
         columns={{ base: 1, md: 2 }}
         spacingX={{ base: "0px", md: "5px" }}
       >
