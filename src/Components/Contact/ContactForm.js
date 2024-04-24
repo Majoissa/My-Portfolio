@@ -58,15 +58,17 @@ const ContactForm = () => {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://portfolioserver-8vmrkc5xi-soul-plates-projects.vercel.app/send",
+        "https://portfolioserver-fzpebuic4-soul-plates-projects.vercel.app/send",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include", // Puede ser 'include', 'same-origin' o 'omit'
           body: JSON.stringify({ name, mail, message }),
         }
       );
+
       const responseData = await response.json();
       if (response.ok) {
         console.log("Email sent successfully", responseData);
