@@ -58,7 +58,7 @@ const ContactForm = () => {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://portfolioserver-lryxwpijv-soul-plates-projects.vercel.app/send",
+        "https://portfolioserver-2afp71ewx-soul-plates-projects.vercel.app/send",
         {
           method: "POST",
           headers: {
