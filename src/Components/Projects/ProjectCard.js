@@ -40,7 +40,6 @@ const ProjectCard = ({
           fontFamily=' "Paytone One", sans-serif'
           fontWeight={"bold"}
           color={colorMode === "light" ? "#486060" : "white"}
-          textShadow={"0.5px 0.5px 2px rgba(0, 0, 0, 0.5)"}
           size={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
         >
           {title}
