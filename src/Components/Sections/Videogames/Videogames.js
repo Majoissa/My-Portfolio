@@ -1,4 +1,3 @@
-import Nav from "../../Navbar/Nav";
 import Texts from "../../GeneralComponents/Texts";
 import Footer from "../../Footer/Footer";
 import { Box, VStack, useColorMode } from "@chakra-ui/react";
@@ -11,7 +10,6 @@ const Videogames = () => {
   const { t } = useTranslation();
   return (
     <Box>
-      <Nav />
       <VStack
         py={{ base: "4rem" }}
         pb={{ base: "8rem" }}

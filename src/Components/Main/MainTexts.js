@@ -1,7 +1,7 @@
 import Title from "../GeneralComponents/Title";
 import Subtitle from "../GeneralComponents/Subtitle";
 import React from "react";
-import { VStack, HStack, Button } from "@chakra-ui/react";
+import { VStack, HStack, Button, Box } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 
@@ -20,10 +20,12 @@ const MainTexts = () => {
     >
       <Fade cascade direction="down" damping={0.3}>
         <Title text={t("welcome-title")} />
-        <Subtitle text={t("welcome-subtitle")} />
+        <Box px={"30px"}>
+          <Subtitle text={t("welcome-subtitle")} />
+        </Box>
         <HStack>
           <a
-            href="https://drive.google.com/file/d/1DQ3WCCU9gyXldJUOkNhWslBGI53nkqRw/view"
+            href="https://drive.google.com/file/d/1fq0QbIDMjOGsc8SkFXO5kY-CITDijoyj/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >

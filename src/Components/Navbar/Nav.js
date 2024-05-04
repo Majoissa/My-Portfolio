@@ -45,10 +45,11 @@ const Nav = () => {
       });
 
       const currentSection = sections.find((section, index) => {
+        const buffer = 10;
         return (
-          currentScrollY >= sectionOffsets[index] &&
+          currentScrollY + buffer >= sectionOffsets[index] &&
           (index === sections.length - 1 ||
-            currentScrollY < sectionOffsets[index + 1])
+            currentScrollY + buffer < sectionOffsets[index + 1])
         );
       });
 
@@ -69,10 +70,13 @@ const Nav = () => {
   const handleNavLinkClick = (item) => {
     setActiveSection(item);
 
+    const sectionElement = document.getElementById(item);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+
     if (location !== "/" && activeSection !== "home") {
       setLocation("/");
-    } else {
-      setActiveSection(item);
     }
   };
 
@@ -161,7 +165,10 @@ const Nav = () => {
                   <ListItem key={index} p={4}>
                     <a
                       href={`#${item}`}
-                      onClick={() => handleNavLinkClick(item)}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleNavLinkClick(item);
+                      }}
                       className="nav-link"
                       style={{
                         fontWeight: activeSection === item ? "bold" : "normal",
@@ -244,7 +251,10 @@ const Nav = () => {
               <ListItem key={index}>
                 <a
                   href={`#${item}`}
-                  onClick={() => handleNavLinkClick(item)}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    handleNavLinkClick(item);
+                  }}
                   className="nav-link"
                   style={{
                     fontWeight: activeSection === item ? "bold" : "normal",

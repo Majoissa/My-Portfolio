@@ -1,6 +1,7 @@
 import "./i18n";
 import { Route } from "wouter";
 import { ChakraProvider } from "@chakra-ui/react";
+import ScrollToTop from "./Components/GeneralComponents/ScrollToTop";
 import { Box } from "@chakra-ui/react";
 import HomePage from "./Components/HomePage/HomePage";
 import Pages from "./Components/Sections/Pages/Pages";
@@ -12,6 +13,7 @@ import Nav from "./Components/Navbar/Nav";
 function App() {
   return (
     <ChakraProvider>
+      <ScrollToTop />
       <Box>
         <Box as="header" className="App-header">
           <Nav />

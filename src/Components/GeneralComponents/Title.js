@@ -11,7 +11,7 @@ const Title = ({ text }) => {
         fontFamily=' "Paytone One", sans-serif'
         fontWeight={"bold"}
         color={colorMode === "light" ? "#486060" : "white"}
-        size={{ base: "md", sm: "lg", md: "xl", lg: "2xl" }}
+        size={{ base: "lg", md: "xl", lg: "2xl" }}
       >
         {text}
       </Heading>
