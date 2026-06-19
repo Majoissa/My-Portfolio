@@ -2,7 +2,6 @@ import React from "react";
 import { Box, VStack, useColorMode } from "@chakra-ui/react";
 import WhatIdoTexts from "./WhatIdoTexts";
 import WhatIdoGrid from "./WhatIdoGrid";
-import { Fade } from "react-awesome-reveal";
 
 const WhatIdo = () => {
   const { colorMode } = useColorMode();

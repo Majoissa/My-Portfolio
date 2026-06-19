@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Nav.css";
 import {
   Box,
@@ -26,7 +26,7 @@ const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
     setIsScrolled(currentScrollY > 0);
 
@@ -57,14 +57,14 @@ const Nav = () => {
     } else {
       setActiveSection("");
     }
-  };
+  }, [location]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [location]);
+  }, [handleScroll]);
   const navItems = ["about", "whatIdo", "experience", "projects", "contact"];
 
   const handleNavLinkClick = (item) => {
