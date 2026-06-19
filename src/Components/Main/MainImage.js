@@ -1,7 +1,7 @@
 import { Image, VStack } from "@chakra-ui/react";
 
 const MainImage = () => {
-  const image = require("./formas.png");
+  const image = require("./fondo_mejorado.png");
   return (
     <VStack>
       <Image

@@ -18,13 +18,14 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
-  const cancelRef = React.useRef();
+  const cancelRef = useRef();
   const { colorMode } = useColorMode();
   const [name, setname] = useState("");
   const [mail, setmail] = useState("");
@@ -56,20 +57,34 @@ const ContactForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS credentials are missing. Please configure them in the .env file.");
+      setIsError(true);
+      onOpen();
+      return;
+    }
+
     try {
-      const response = await fetch(
-        "https://portfolioserver-chi.vercel.app/send",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name, mail, message }),
-        }
+      const templateParams = {
+        name: name,
+        mail: mail,
+        message: message,
+      };
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
       );
-      const responseData = await response.json();
-      if (response.ok) {
-        console.log("Email sent successfully", responseData);
+
+      if (response.status === 200) {
+        console.log("Email sent successfully", response);
         setIsSuccess(true);
         onOpen();
         setname("");
@@ -81,13 +96,10 @@ const ContactForm = () => {
           message: false,
         });
       } else {
-        console.error("Failed to send email", responseData);
+        console.error("Failed to send email", response);
         setIsError(true);
         onOpen();
-        // Aquí puedes mostrar un mensaje de error al usuario
       }
-
-      console.log(responseData);
     } catch (error) {
       console.error(error);
       setIsError(true);
