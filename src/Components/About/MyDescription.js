@@ -15,7 +15,7 @@ const MyDescription = ({ text }) => {
           zIndex={5}
           size={{ base: "xs", md: "sm", lg: "md" }}
           textAlign={{ base: "center", md: "left" }}
-          mt={{ base: "15", md: "50", lg: "75" }}
+          mt={{ base: "15px", md: "0px" }}
         >
           {text}
         </Heading>

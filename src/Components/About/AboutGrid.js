@@ -12,11 +12,12 @@ const AboutGrid = () => {
         width={{ base: "80%", xl: "65%", "2xl": "50%" }}
         columns={{ base: 1, md: 2 }}
         spacingX={{ base: "0px", md: "5px" }}
+        alignItems="center"
       >
         <Box>
           <AboutImage />
         </Box>
-        <Box mt={{ lg: "3rem" }}>
+        <Box mt={{ base: "3rem", md: "0px" }}>
           <MyDescription text={t("about-description")} />
         </Box>
       </SimpleGrid>

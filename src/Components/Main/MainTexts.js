@@ -25,7 +25,7 @@ const MainTexts = () => {
         </Box>
         <HStack>
           <a
-            href="https://drive.google.com/file/d/19TLGmkINb4B3bE-jDDk-LlgMNX9kZkZg/view?usp=sharing"
+            href={t("cv-link")}
             target="_blank"
             rel="noreferrer"
           >

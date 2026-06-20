@@ -1,21 +1,22 @@
 {
     "navbar": ["Sobre mi", "Què faig", "Experiència", "Els meus projectes", "Contacte"],
     "welcome-title": "Hola, sóc María José Issa.",
-    "welcome-subtitle": "Una desenvolupadora full-stack i una entusiasta de l'UX.",
+    "welcome-subtitle": "Una desenvolupadora frontend.",
+    "cv-link": "https://drive.google.com/file/d/1Nu6gBASgCYHA3N1kGuO942DIwnyuOYEx/view",
     "contact-button": "Contacta amb mi",
     "about-title": "Una mica sobre mi.",
-    "about-description" : "Sóc una professional en formació constant, apassionada pel camp de la tecnologia i l'aprenentatge. Estic especialitzada en tecnologies com React, React Native, Chakra UI i Node.js, entre d'altres. Si busques un desenvolupador que pugui integrar perfectament programació i elements de disseny visualment atractius als teus projectes, estic llesta per oferir-te resultats excel·lents. Si vols treballar amb mi, no dubtis a contactar-me. Junts podem assolir grans coses.",
+    "about-description" : "Sóc desenvolupadora Frontend amb experiència en React, Vue.js, React Native i Kotlin Multiplatform (KMP) per a projectes web i multiplataforma. Treballo activament amb eines d'IA (GitHub Copilot, Codex) integrades en el meu flux de desenvolupament diari. Vinc d'un camí no lineal: vaig començar en educació, la qual cosa em va aportar adaptabilitat i habilitats sòlides de comunicació i treball en equip. Actualment, aprofundeixo en bones pràctiques de desenvolupament (Clean Code, SOLID) i amplio la meva formació cursant el Grau en Enginyeria Informàtica. Si busques una desenvolupadora per integrar programació i disseny visualment atractiu, ¡junts podem assolir grans coses!",
     "whatido-title": "El que faig.",
     "whatido-subtitle": "Aquí pots descobrir les meves passions i les coses que m'agrada fer i les que sóc bona.",
     "design": "M'agrada el disseny d'UX i UI. Intento estar constantment aprenent i buscant noves eines per fer els meus projectes més atractius.",
     "coding": "M'agrada codificar i aprendre coses noves de programació. Estic constantment intentant innovar i fent nous cursos per ampliar els meus coneixements i millorar la meva professionalitat.",
-    "skills": "I have skills to socialize and adapt to new situations and face new challenges. I like to work in a team and I have experience in the Scrum methodology",
+    "skills": "Tinc habilitats per socialitzar, adaptar-me a noves situacions i afrontar nous reptes. M'agrada treballar en equip i tinc experiència en la metodologia Scrum.",
     "experience-title": "La meva experiència.",
     "experience-description": "En aquesta secció podeu consultar algunes de les tecnologies amb les quals he treballat durant aquests anys.",
     "project-title": "Els meus projectes.",
     "pages": "Pàgines web",
     "apps": "Aplicacions",
-    "apis": "Apis",
+    "apis": "APIs",
     "games": "Videojocs",
     "contact-title": "Contacte.",
     "contact-subtitle": "¡No dubtis a contactar amb mi a través d'aquest formulari i et respondré el més aviat possible!",
@@ -26,22 +27,152 @@
     "message": "Missatge",
     "message-help": "Introdueix el teu missatge.",
     "send-button": "Envia",
-    "footer-text": "Desenvolupadora full-stack en formació constant, apassionat del camp de la tecnologia i l'aprenentatge.",
+    "footer-text": "Desenvolupadora frontend en formació constant, apassionada del camp de la tecnologia i l'aprenentatge.",
     "rights": "Tots els drets reservats.",
-    "pages-description": "Benvingut a la secció de projectes de pàgines web! Aquí descobriràs una col·lecció de les meves creacions elaborades amb HTML, CSS, PHP, JavaScript, React, Bootstrap i Chakra UI. Si estàs buscant una desenvolupadora web, sent-te lliure d'explorar i posar-te en contacte amb mi per a qualsevol consulta", "pages-cards": {"pages-titles" : ["Pàgina web d'administració per a escola Joviat","Pàgina web de Pokémon", "Pàgina del restaurant Little Lemon", "Portfolio-Meta", "Soulplates" ,"Skyline airways", "React-hotel", "Magnòlia e-commerce", "Php crud", "Exportació XML", "Clonació de la pàgina web Goal", "Clonació del lloc web d'Airbnb ", "Pàgina de pastissos", "Pràctica RSS" , "Botiga de mobles", "Lloc web de gestor de marca", "Pàgina web per a 'hair day'", "El meu anterior portfoli"], "pages-descriptions": ["Lloc web perquè els administradors de l'escola Joviat carreguen dades dels estudiants. Fet amb React Native, Chakra UI i Firebase", "Lloc web fet amb l'API de Pokémon, react i chakra ui. Compte amb canvis de vista de llista a grid, navegació i paginació", "Projecte de pàgina web realitzat amb react per al curs de Meta ‘Desarrollador Frontend’. He tingut la sort de poder realitzar aquest curs que m'ha donat bases sòlides per tenir bones pràctiques en react i en l'ús d'APIs, entre altres coses", "Projecte de pàgina web basada en react i Chakra UI per al Curs-meta de desenvolupador frontend", "Projecte web grupal preparat per al bootstrap de Migracode. La idea darrere és simular una ONG que crea una xarxa de contactes entre usuaris beneficiaris, voluntaris i donants. Realitzat amb React, bootstrap, node js i sql.", "Tasca grupal de cerca de vols, realitzat en base a php, html, css, xsl i xml", "Projecte de pàgina web basat en react, html, css i bootstrap "," Projecte de pàgina web basat en xml, html, css, xslt i php, per a dues botigues: una moderna i una altra vintage", "Aplicació per carregar dades en una taula de base de dades a php myadmin, basat en html, css, bootstrap i php ", "Aplicació que permet exportar taules d'una base de dades en php myadmin en format xml, realitzada en base a html, css, bootstrap i php", "Tasca d'imitació de pàgina 'Goal' des de html i bootstrap 5 ", "Tasca pràctica per imitar tan bé com sigui possible l'aparença del web Airbnb.es", "Pàgina web responsive realitzada amb el model 'mobile first' per a la venda de productes de Pastisseria", "Pàgina que permet seleccionar diaris i triar la opció de mostrar els titulars , les fotos, o les fotos i els titulars junts, en base a les RSS de cada diari","Pàgina web realitzada sobre html, css grid i css flex, amb el curs de l'instructor Juan Pablo de la Torre Valdez", " Pàgina web responsive per a una marca que ofereix serveis de màrqueting i creació de pàgines web, realitzada amb html, css, php i javascript", "pàgina web realitzada en base a html i css per al curs 'html i css en profunditat' de Meta", "Pàgina web per mostrar tots els meus projectes"] ,"github-link": ["https://github.com/Majoissa/Joviat-admin", "https://github.com/Majoissa/Lista-de-pokemons", "https://github.com/Majoissa/meta-final-project", "https://github.com/Majoissa/portfolio-meta","https://github.com/Majoissa/SoulPlatesProject","https://github.com/Majoissa/buscadorDeVuelos","https://github.com/Majoissa/HotelPageReact", "https://github.com/Majoissa/botiga-moderna", "https://github.com/Majoissa/CRUD", "https://github.com/Majoissa/Practica-de-exportacion-XML","https://github.com/Majoissa/goal", "https://github.com/Majoissa/Tarea-practica-imitar-pagina-de-airbnb","https://github.com/Majoissa/cake-web-page", "https://github.com/Majoissa/RSS", "https://github.com/Majoissa/tiendaMuebles", "https://github.com/Majoissa/brandwise", "https://github.com/Majoissa/hairProyect","https://github.com/Majoissa/Majoissa.github.io"]},
+    "pages-description": "Benvingut a la secció de projectes de pàgines web! Aquí descobriràs una col·lecció de les meves creacions elaborades amb HTML, CSS, PHP, JavaScript, React, Bootstrap i Chakra UI. Si estàs buscant una desenvolupadora web, sent-te lliure d'explorar i posar-te en contacte amb mi per a qualsevol consulta.",
+    "pages-cards": {
+        "pages-titles" : [
+            "Pàgina web d'administració per a l'escola Joviat",
+            "Pàgina web de Pokémon",
+            "Pàgina del restaurant Little Lemon",
+            "Portfolio-Meta",
+            "Soulplates",
+            "Skyline Airways",
+            "React Hotel",
+            "Magnolia E-Commerce",
+            "PHP CRUD",
+            "Exportació XML",
+            "Clonación del lloc web Goal",
+            "Clonació del lloc web d'Airbnb",
+            "Pàgina de pastissos",
+            "Pràctica RSS",
+            "Botiga de mobles",
+            "Lloc web de marca",
+            "Pàgina web per a 'hair day'",
+            "El meu antic portfolio"
+        ],
+        "pages-descriptions": [
+            "Lloc web perquè els administradors de l'escola Joviat carreguin dades dels estudiants. Fet amb React Native, Chakra UI i Firebase.",
+            "Lloc web fet amb l'API de Pokémon, React i Chakra UI. Compta amb canvis de vista de llista a grid, navegació i paginació.",
+            "Projecte de pàgina web realitzat amb React per al curs de Meta ‘Desarrollador Frontend’. He tingut la sort de poder realitzar aquest curs que m'ha donat bases sòlides per tenir bones pràctiques en React i en l'ús d'APIs, entre d'altres coses.",
+            "Projecte de pàgina web basada en React i Chakra UI per al curs de Meta de desenvolupador frontend.",
+            "Projecte web grupal realitzat per al bootcamp de Migracode. La idea és simular una ONG que crea una xarxa de contactes entre usuaris beneficiaris, voluntaris i donants. Realitzat amb React, Bootstrap, Node.js i SQL.",
+            "Tasca grupal de cerca de vols, realitzada sobre la base de PHP, HTML, CSS, XSL i XML.",
+            "Projecte de pàgina web basat en React, HTML, CSS i Bootstrap.",
+            "Projecte de pàgina web basat en XML, HTML, CSS, XSLT i PHP, per a dues botigues: una de moderna i una altra de vintage.",
+            "Aplicación per carregar dades en una taula d'una base de dades a phpMyAdmin, basat en HTML, CSS, Bootstrap i PHP.",
+            "Aplicació que permet exportar taules d'una base de dades a phpMyAdmin en format XML, realitzada en base a HTML, CSS, Bootstrap i PHP.",
+            "Tasca de clonació de la pàgina de Goal amb HTML i Bootstrap 5.",
+            "Tasca pràctica per imitar de la millor manera possible l'aparença del web Airbnb.es.",
+            "Pàgina web responsiva realitzada amb el model 'mobile-first' per a la venda de productes de pastisseria.",
+            "Pàgina que permet seleccionar diaris i triar l'opció de mostrar els titulars, les fotos, o les fotos i els titulars junts, basat en les RSS de cada diari.",
+            "Pàgina web realitzada sobre HTML, CSS Grid i CSS Flexbox, amb el curs de l'instructor Juan Pablo de la Torre Valdez.",
+            "Pàgina web responsiva per a una marca que ofereix serveis de màrqueting i creació de pàgines web, realitzada amb HTML, CSS, PHP i JavaScript.",
+            "Pàgina web realitzada en base a HTML i CSS per al curs 'HTML i CSS en profunditat' de Meta.",
+            "El meu antic portfolio per mostrar tots els meus projectes."
+        ],
+        "github-link": [
+            "https://github.com/Majoissa/Joviat-admin",
+            "https://github.com/Majoissa/Lista-de-pokemons",
+            "https://github.com/Majoissa/meta-final-project",
+            "https://github.com/Majoissa/portfolio-meta",
+            "https://github.com/Majoissa/SoulPlatesProject",
+            "https://github.com/Majoissa/buscadorDeVuelos",
+            "https://github.com/Majoissa/HotelPageReact",
+            "https://github.com/Majoissa/botiga-moderna",
+            "https://github.com/Majoissa/CRUD",
+            "https://github.com/Majoissa/Practica-de-exportacion-XML",
+            "https://github.com/Majoissa/goal",
+            "https://github.com/Majoissa/Tarea-practica-imitar-pagina-de-airbnb",
+            "https://github.com/Majoissa/cake-web-page",
+            "https://github.com/Majoissa/RSS",
+            "https://github.com/Majoissa/tiendaMuebles",
+            "https://github.com/Majoissa/brandwise",
+            "https://github.com/Majoissa/hairProyect",
+            "https://github.com/Majoissa/Majoissa.github.io"
+        ]
+    },
     "view-code": "Veure el codi",
     "view-site": "Veure la pàgina",
     "home-btn": "Tornar a l'inici",
     "app-description": "¡Benvingut a la secció Aplicacions! Aquí trobareu les meves aplicacions, dissenyades i desenvolupades per oferir una experiència d'usuari perfecta. Senti's lliure d'explorar i comunicar-se amb mi per a qualsevol consulta o informació addicional.",
-    "apps-cards": {"apps-titles" : ["Aplicació Hosteleria joviat", "Aplicació Receptes 'Yumee'", "Controlador de ventilador", "Aplicació Loteria", "Crud Android"], "apps-descriptions": ["Aplicació social, realitzada amb React native per a dispositius mòbils Android i iOS, per a la secció d'Hostaleria de la escola Joviat amb la finalitat de generar contactes a la comunitat institucional", "Aplicació mòbil per pujar, qualificar i guardar les teves receptes favorites, realitzada amb Android studio i java", "Aplicació Android per controlar la velocitat dels ventiladors d'un ordinador", "Aplicació Android per jugar a la loteria", "Aplicació CRUD Android per crear, llegir, actualitzar i eliminar informació, feta amb SQLite i android studio"],"apps-link": ["https://github.com/Majoissa/HosteleriaJoviatApp", "https://github.com/Majoissa/RecipesApp", "https://github.com/Majoissa/FanController", "https://github.com/Majoissa/androidLottery", "https://github.com/Majoissa/crudAndroidStudio"]},
+    "apps-cards": {
+        "apps-titles" : [
+            "Hosteleria Joviat App",
+            "Yumee Recipes App",
+            "Controlador de ventilador",
+            "Aplicació Loteria",
+            "Android CRUD"
+        ],
+        "apps-descriptions": [
+            "Aplicació social, realitzada amb React Native per a dispositius mòbils Android i iOS, per a la secció d'Hostaleria de la escola Joviat amb la finalitat de generar contactes a la comunitat institucional.",
+            "Aplicació mòbil per pujar, qualificar i guardar les teves receptes favorites, realitzada amb Android Studio i Java.",
+            "Aplicació Android per controlar la velocitat dels ventiladors d'un ordinador.",
+            "Aplicació Android per jugar a la loteria.",
+            "Aplicació CRUD Android per crear, llegir, actualitzar i eliminar informació, feta amb SQLite i Android Studio."
+        ],
+        "apps-link": [
+            "https://github.com/Majoissa/HosteleriaJoviatApp",
+            "https://github.com/Majoissa/RecipesApp",
+            "https://github.com/Majoissa/FanController",
+            "https://github.com/Majoissa/androidLottery",
+            "https://github.com/Majoissa/crudAndroidStudio"
+        ]
+    },
     "api-description": "Benvingut a la secció APIS. Aquí trobaràs pàgines web que he creat usant APIS per al backend, algunes creades per altres desenvolupadors i altres implementades per mi.",
-    "apis-cards": {"apis-titles" : ["Aplicació amb java per identificar plantes", "Pàgina web amb js feta amb API de Rick i Morty", "Pàgina del restaurant Little Lemon", "Pàgina web de Soulplates amb react i node js API", "Lloc web de Pokémon fet amb Pokémon API"], "apis-descriptions": ["Aplicació d'identificació de plantes basada en JAVA","Pàgina web que mostra tot sobre el programa de televisió Rick i Morty, realitzada sobre la base de la API de Rick i Morty","Projecte de pàgina web realitzat amb react per al curs Meta 'Frontend Developer' He tingut la sort de poder realitzar aquest curs que m'ha donat bases sòlides per tenir bones pràctiques a react i en l'ús d'APIs, entre altres coses", "Projecte web grupal elaborat per al bootcamp de Migracode, amb react, node js i sql", "Lloc web realitzat amb l'API de Pokémon, react i chakra ui. Teniu canvis de vista, de llista a grilla, navegació i paginació"],"apis-link": ["https://github.com/Majoissa/plantnetApp", "https://github.com/Majoissa/RickAndMortyWithAPI","https://github.com/Majoissa/meta-final-project", "https://github.com/Majoissa/SoulPlatesProject", "https://github.com/Majoissa/Lista-de-pokemons"]},
+    "apis-cards": {
+        "apis-titles" : [
+            "Aplicació amb Java per identificar plantes",
+            "Página web amb JS feta amb API de Rick i Morty",
+            "Pàgina del restaurant Little Lemon",
+            "Pàgina web de Soulplates amb React i Node.js",
+            "Lloc web de Pokémon fet amb Pokémon API"
+        ],
+        "apis-descriptions": [
+            "Aplicació d'identificació de plantes basada en Java.",
+            "Pàgina web que mostra tot sobre el programa de televisió Rick i Morty, realitzada sobre la base de la API de Rick i Morty.",
+            "Projecte de pàgina web realitzat amb React per al curs Meta 'Frontend Developer' He tingut la sort de poder realitzar aquest curs que m'ha donat bases sòlides per tenir bones pràctiques en React i en l'ús d'APIs, entre d'altres coses.",
+            "Projecte web grupal realitzat per al bootcamp de Migracode. La idea és simular una ONG que crea una xarxa de contactes entre usuaris beneficiaris, voluntaris i donants. Realitzat amb React, Node.js i SQL.",
+            "Lloc web realitzat amb l'API de Pokémon, React i Chakra UI. Compta amb canvis de vista, de llista a grilla, navegació i paginación."
+        ],
+        "apis-link": [
+            "https://github.com/Majoissa/plantnetApp",
+            "https://github.com/Majoissa/RickAndMortyWithAPI",
+            "https://github.com/Majoissa/meta-final-project",
+            "https://github.com/Majoissa/SoulPlatesProject",
+            "https://github.com/Majoissa/Lista-de-pokemons"
+        ]
+    },
     "game-description": "Benvingut al meu racó digital de creativitat i experimentació! Aquí trobaràs una selecció de projectes de videojocs en els quals he posat la meva curiositat i esforç, encara que no aspire a ser una professional del sector. Cada joc és una finestra a noves habilitats i descobriments. T'invito a explorar-los i compartir les teves impressions. Gaudeix del viatge per aquest terreny lúdic i experimental!",
-    "games-cards": {"games-titles" : ["Destroy planet", "Flappy bird", "Arkanoid", "Asteroid", "Turtle's lettuce","Crazy balls"], "games-descriptions": [ "Videojoc per a mòbil, fet amb unity hub, illustrator i corel draw", "Videojoc clàssic de flappy bird fet amb unity hub amb llenguatge c#", "Videojoc per a ordinador fet amb unity hub", "Videojoc per a ordinador fet amb unity hub ", "Demostració de videojoc realitzada amb unity hub, il·lustrator i corell draw", "Demostració de videojoc realitzada amb unity hub, illustrator i corel draw"],"games-link": ["https://github.com/Majoissa/DestroyPlanetIssa", "https://github.com/Majoissa/FlappyBirdGame", "https://github.com/Majoissa/Arkanoid", "https://github.com/Majoissa/AsteroidMajo", "https://github.com/Majoissa/turtleslettuce", "https://github.com/Majoissa/CrazyBallsVideoGame"]},
+    "games-cards": {
+        "games-titles" : [
+            "Destroy Planet",
+            "Flappy Bird",
+            "Arkanoid",
+            "Asteroid",
+            "Turtle's Lettuce",
+            "Crazy Balls"
+        ],
+        "games-descriptions": [
+            "Videojoc per a mòbil, fet amb Unity, Adobe Illustrator i CorelDRAW.",
+            "Videojoc clàssic de Flappy Bird fet amb Unity amb llenguatge C#.",
+            "Videojoc per a ordinador fet amb Unity.",
+            "Videojoc per a ordinador fet amb Unity.",
+            "Demostració de videojoc realitzada amb Unity, Illustrator i CorelDRAW.",
+            "Demostració de videojoc realitzada amb Unity, Illustrator i CorelDRAW."
+        ],
+        "games-link": [
+            "https://github.com/Majoissa/DestroyPlanetIssa",
+            "https://github.com/Majoissa/FlappyBirdGame",
+            "https://github.com/Majoissa/Arkanoid",
+            "https://github.com/Majoissa/AsteroidMajo",
+            "https://github.com/Majoissa/turtleslettuce",
+            "https://github.com/Majoissa/CrazyBallsVideoGame"
+        ]
+    },
     "alert-header": "El missatge s'ha enviat correctament",
-     "alert-dialog": "El teu missatge s'ha enviat correctament. Em posaré en contacte amb tu tan aviat com sigui possible",
-     "acept": "Acceptar",
-     "alert-no-header": "No s'ha pogut enviar el missatge",
-     "alert-no-dialog": "El vostre missatge no s'ha enviat. Podeu tornar-ho a provar"
+    "alert-dialog": "El teu missatge s'ha enviat correctament. Em posaré en contacte amb tu tan aviat com sigui possible.",
+    "acept": "Acceptar",
+    "alert-no-header": "No s'ha pogut enviar el missatge",
+    "alert-no-dialog": "El vostre missatge no s'ha enviat. Podeu tornar-ho a provar."
 }
-    
