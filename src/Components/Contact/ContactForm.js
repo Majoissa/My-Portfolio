@@ -113,11 +113,12 @@ const ContactForm = () => {
         fontFamily=' "Karla", sans-serif'
         onSubmit={handleSubmit}
         maxW={{ base: "90%", sm: "85%", md: "60%", lg: "40%" }}
-        bg={"white"}
+        bg={colorMode === "light" ? "white" : "gray.800"}
         margin={"auto"}
         px={"2rem"}
         borderRadius={"30px"}
-        color={"#486060"}
+        color={colorMode === "light" ? "#486060" : "white"}
+        boxShadow="md"
       >
         <FormControl mt={50} maxW={600} isRequired>
           <FormLabel mt={5}>{t("name-label")}</FormLabel>
@@ -128,6 +129,9 @@ const ContactForm = () => {
             onBlur={() => handleBlur("name")}
             placeholder={t("name-label")}
             isInvalid={touchedFields.name && name === ""}
+            borderColor={colorMode === "light" ? "gray.300" : "whiteAlpha.400"}
+            _hover={{ borderColor: colorMode === "light" ? "gray.400" : "whiteAlpha.600" }}
+            _focus={{ borderColor: "teal.400", boxShadow: "0 0 0 1px var(--chakra-colors-teal-400)" }}
             sx={{
               "::placeholder": {
                 color: placeholderColor,
@@ -136,7 +140,7 @@ const ContactForm = () => {
           />
           <FormHelperText
             mt={1}
-            color={touchedFields.name && name === "" ? "red" : "gray"}
+            color={touchedFields.name && name === "" ? "red" : (colorMode === "light" ? "gray" : "gray.400")}
           >
             {t("name-help")}
           </FormHelperText>
@@ -148,6 +152,9 @@ const ContactForm = () => {
             onBlur={() => handleBlur("mail")}
             placeholder={t("mail-label")}
             isInvalid={touchedFields.mail && mail === ""}
+            borderColor={colorMode === "light" ? "gray.300" : "whiteAlpha.400"}
+            _hover={{ borderColor: colorMode === "light" ? "gray.400" : "whiteAlpha.600" }}
+            _focus={{ borderColor: "teal.400", boxShadow: "0 0 0 1px var(--chakra-colors-teal-400)" }}
             sx={{
               "::placeholder": {
                 color: placeholderColor,
@@ -156,7 +163,7 @@ const ContactForm = () => {
           />
           <FormHelperText
             mt={1}
-            color={touchedFields.mail && mail === "" ? "red" : "gray"}
+            color={touchedFields.mail && mail === "" ? "red" : (colorMode === "light" ? "gray" : "gray.400")}
           >
             {t("mail-help")}
           </FormHelperText>
@@ -167,6 +174,9 @@ const ContactForm = () => {
             onBlur={() => handleBlur("message")}
             placeholder={t("message")}
             isInvalid={touchedFields.message && message === ""}
+            borderColor={colorMode === "light" ? "gray.300" : "whiteAlpha.400"}
+            _hover={{ borderColor: colorMode === "light" ? "gray.400" : "whiteAlpha.600" }}
+            _focus={{ borderColor: "teal.400", boxShadow: "0 0 0 1px var(--chakra-colors-teal-400)" }}
             sx={{
               "::placeholder": {
                 color: placeholderColor,
@@ -176,7 +186,7 @@ const ContactForm = () => {
 
           <FormHelperText
             mt={1}
-            color={touchedFields.mail && mail === "" ? "red" : "gray"}
+            color={touchedFields.mail && mail === "" ? "red" : (colorMode === "light" ? "gray" : "gray.400")}
           >
             {t("message-help")}
           </FormHelperText>

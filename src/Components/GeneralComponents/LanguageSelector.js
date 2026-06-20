@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Select, Box } from "@chakra-ui/react";
 import { useColorMode } from "@chakra-ui/react";
@@ -6,10 +5,6 @@ import { useColorMode } from "@chakra-ui/react";
 function LanguageSelector() {
   const { colorMode } = useColorMode();
   const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage("en");
-  }, [i18n]);
 
   const changeLanguage = (event) => {
     i18n.changeLanguage(event.target.value);
@@ -19,6 +14,7 @@ function LanguageSelector() {
     <Box>
       <Select
         size="sm"
+        value={i18n.language}
         onChange={changeLanguage}
         border={"none"}
         fontFamily=' "Karla", sans-serif'
