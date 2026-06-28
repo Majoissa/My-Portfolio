@@ -40,7 +40,7 @@ const WhatIdoGrid = () => {
                 />
               }
               bg={colorMode === "light" ? "#efe259" : "#215460"}
-              mb={{ base: "none", md: "-50" }}
+              mb={4}
               style={{ transition: "transform 0.3s" }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.transform = "rotateY(180deg)")
